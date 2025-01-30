@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetBuddy</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">BudgetBuddy</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="#pocetna" class="pocetna-active">Početna</a></li>
+            <li><a href="#about">O aplikaciji</a></li>
+            <li><a href="#znacajke">Značajke</a></li>
+            <li><a href="#startnow">Počni sada</a></li>
+        </ul>
+    </header>
+    
+    <section class="pocetna swiper" id="pocetna">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="./images/finance.jpg" alt="Financial management">
+                <div class="pocetna-text">
+                    <span>Preuzmi kontrolu nad svojim financijama</span>
+                    <h1>Pametno upravljajte <br>svojim budžetom</h1>
+                    <a href="#startnow" class="btn">Započni sad</a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./images/students.jpg" alt="Savings goals">
+                <div class="pocetna-text">
+                    <span>Postižite svoje financijske ciljeve</span>
+                    <h1>Prati svoju štednju <br>i napredak</h1>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+<section class="about" id="about">
+    <div class="heading">
+        <h1>Zašto odabrati <br>BudgetBuddy?</h1>
+        <p>BudgetBuddy je revolucionarna aplikacija dizajnirana specifično za potrebe mladih koji žele preuzeti kontrolu nad svojim financijama.</p>
+    </div>
+    <div class="about-container">
+        <div class="box">
+            <div class="about-img">
+                <img src="./images/plann.jpg" alt="Budget planning">
+            </div>
+            <div class="about-text">
+                <h2>Unos prihoda i troškova</h2>
+                <p>Jednostavno unesi mjesečne prihode i evidentiraj troškove kako bi pratio/la stanje svog budžeta</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="about-img">
+                <img src="./images/analiza.jpg" alt="Expense categories">
+            </div>
+            <div class="about-text">
+                <h2>Pregled financijskog stanja</h2>
+                <p>Aplikacija automatski prikazuje koliko si u minusu ili plusu te pruža jasne vizualne prikaze tvoje potrošnje</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="about-img">
+                <img src="./images/money.jpg" alt="Savings tracker">
+            </div>
+            <div class="about-text">
+                <h2>Grafička analiza troškova</h2>
+                <p>Vizualiziraj svoje troškove kroz jasne dijagrame, saznaj koliko trošiš u pojedinim kategorijama, prikazano u postocima i stvarnim novčanim iznosima</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="znacajke" id="znacajke">
+    <div class="heading">
+        <h1>Naše jedinstvene <br>prednosti</h1>
+        <p>Otkrijte kako BudgetBuddy čini financijsko upravljanje jednostavnim i pristupačnim</p>
+    </div>
+    
+    <div class="znacajke-container">
+        
+        <div class="feature-card">
+            <h3>Jednostavan početak</h3>
+            <p>Bez kompliciranih postavki, unesi svoje prihode i troškove te odmah kreni s praćenjem budžeta!</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>Siguran i jednostavan pristup</h3>
+            <p>Tvoji podaci su privatni i dostupni samo tebi, jednostavno unesi, pregledaj i upravljaj svojim financijama bez komplikacija</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3> Dostupno na svim uređajima</h3>
+            <p>Bez obzira koristiš li mobitel, tablet ili računalo, uvijek imaš pristup svojim financijama</p>
+        </div>
+        
+        <div class="feature-card">
+            <h3>Pregled financijskog stanja</h3>
+            <p>Jasno vidi koliko si potrošio/la i koliko ti je novca preostalo, bez iznenađenja na kraju mjeseca!</p>
+        </div>
+    </div>
+</section>
+
+<section class="unos-podataka" id="startnow">
+    <div class="heading">
+        <h1>Unesi svoje financijske podatke</h1>
+    </div>
+    
+    <div class="unos-container">
+        <div class="unos-box">
+            <h3>Mjesečni prihodi</h3>
+            <div class="input-group">
+                <input type="number" id="prihodi" placeholder="Ukupni prihodi (u eurima)">
+                <button class="btn" onclick="dodajPrihode()">Spremi prihode</button>
+            </div>
+        </div>
+
+        <div class="unos-box">
+            <h3>Dodaj trošak</h3>
+            <div class="input-group">
+                <select id="kategorija">
+                    <option value="hrana">Hrana</option>
+                    <option value="smjestaj">Smještaj</option>
+                    <option value="prijevoz">Prijevoz</option>
+                    <option value="zabava">Zabava</option>
+                    <option value="ostalo">Ostalo</option>
+                </select>
+                <input type="number" id="iznos" placeholder="Iznos (u eurima)">
+                <button class="btn" onclick="dodajTrosak()">Dodaj trošak</button>
+            </div>
+        </div>
+
+        <div class="stanje-box">
+            <div class="stanje-item">
+                <h4>Ukupni prihodi:</h4>
+                <span id="prikazi-prihode">0 EURA</span>
+            </div>
+            <div class="stanje-item">
+                <h4>Ukupni troškovi:</h4>
+                <span id="prikazi-troskove">0 EURA</span>
+            </div>
+            <div class="stanje-item">
+                <h4>Preostalo sredstava:</h4>
+                <span id="preostalo">0 EURA</span>
+            </div>
+        </div>
+
+        <div class="grafikoni-container">
+            <div class="chart-container">
+                <canvas id="troskoviChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="raspodjelaChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="footer">
+        <div class="footer-box">
+            <h2>BudgetBuddy</h2>
+            <p>Vaš partner u financijskom upravljanju</p>
+            <div class="social">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>&#169; 2024 BudgetBuddy</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

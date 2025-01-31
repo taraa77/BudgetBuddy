@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ===== Osnovni stilovi ===== */
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -41,7 +40,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== Header ===== */
 header {
     position: fixed;
     width: 100%;
@@ -101,7 +99,6 @@ header.shadow {
     display: none;
 }
 
-/* ===== Hero sekcija ===== */
 .pocetna {
     margin-top: 70px;
 }
@@ -168,7 +165,6 @@ header.shadow {
     opacity: 1 !important;
 }
 
-/* ===== O aplikaciji sekcija ===== */
 .about {
     padding: 100px 0;
 }
@@ -234,7 +230,6 @@ header.shadow {
     font-weight: 500;
 }
 
-/* ===== Značajke sekcija ===== */
 .znacajke {
     padding: 100px 0;
     background: var(--light-color);
@@ -254,7 +249,6 @@ header.shadow {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ===== Start Now sekcija ===== */
 .startnow {
     padding: 100px 0;
     display: grid;
@@ -293,7 +287,6 @@ header.shadow {
     transform: scale(1.05);
 }
 
-/* ===== Footer ===== */
 .footer {
     background: var(--dark-color);
     color: var(--bg-color);
@@ -332,7 +325,6 @@ header.shadow {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* ===== Responsive Design ===== */
 @media (max-width: 1200px) {
     header,
     .about-container,
@@ -434,7 +426,6 @@ header.shadow {
         padding: 0 20px;
     }
 }
-/* Dodaj ovo u CSS */
 .unos-podataka {
     padding: 100px 0;
     background: var(--light-color);

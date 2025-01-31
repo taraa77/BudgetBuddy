@@ -1,4 +1,3 @@
-// JavaScript kod
 let finansije = {
     prihodi: 0,
     troskovi: {
@@ -15,15 +14,12 @@ let troskoviChart = null;
 let raspodjelaChart = null;
 
 function azurirajStanje() {
-    // Računanje ukupnih troškova
     const ukupniTroskovi = Object.values(finansije.troskovi).reduce((a, b) => a + b, 0);
     
-    // Ažuriranje prikaza
     document.getElementById('prikazi-prihode').textContent = `${finansije.prihodi} EURA`;
     document.getElementById('prikazi-troskove').textContent = `${ukupniTroskovi} EURA`;
     document.getElementById('preostalo').textContent = `${finansije.prihodi - ukupniTroskovi} EURA`;
     
-    // Ažuriranje grafikona
     azurirajGrafikone();
 }
 
@@ -48,17 +44,14 @@ function dodajTrosak() {
 }
 
 function azurirajGrafikone() {
-    // Uništi postojeće grafikone ako postoje
     if (troskoviChart) troskoviChart.destroy();
     if (raspodjelaChart) raspodjelaChart.destroy();
     
-    // Podaci za grafikone
     const kategorije = Object.keys(finansije.troskovi);
     const iznosi = Object.values(finansije.troskovi);
     const ukupniTroskovi = iznosi.reduce((a, b) => a + b, 0);
     const procenti = iznosi.map(iznos => ((iznos / ukupniTroskovi) * 100).toFixed(1));
     
-    // Grafikoni
     const ctx1 = document.getElementById('troskoviChart').getContext('2d');
     const ctx2 = document.getElementById('raspodjelaChart').getContext('2d');
     
@@ -91,10 +84,9 @@ function azurirajGrafikone() {
     });
 }
 
-// Inicijalizacija
+
 azurirajStanje();
 
-// Swiper Configuration
 var swiper = new Swiper(".pocetna", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -108,7 +100,6 @@ var swiper = new Swiper(".pocetna", {
     },
 });
 
-// Header Scroll Effect
 window.addEventListener('scroll', () => {
     header.classList.toggle('shadow', window.scrollY > 0);
 });
